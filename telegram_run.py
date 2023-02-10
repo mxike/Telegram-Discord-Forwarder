@@ -33,6 +33,7 @@ client.run_until_disconnected()
 
 # TODO
 # Requirements.txt fixen voor pip install 
-
+# Make Readme
+# Fix incoming photo's and forward them 
 
 
