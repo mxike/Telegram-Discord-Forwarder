@@ -15,14 +15,8 @@ class Message:
     def get_photo(self):
         return self.photo
 
-    # def convert_photo(self):
-        # image = Image.open(BytesIO(self.photo.sizes[0].bytes))
-        # image.save('result.png')
-        # image.show()
-        # string = BytesIO(self.photo.file_reference)
-        # string1 = BytesIO(self.photo.sizes[0].bytes)
-        # print(string.decode("utf-8"))
-        # print(string1.decode("utf-8"))
+    def convert_photo(self):
+        pass
         
 
     

@@ -12,10 +12,11 @@ api_id = os.getenv('api_id')
 api_hash = os.getenv('api_hash')
 channel = [os.getenv('channel'), os.getenv('channel2')]
 session_name = os.getenv('session_name')
-webhook_url = os.getenv('webhook_url')
+webhook_url = os.getenv('discord_webhook_url')
 
 client = TelegramClient(session_name, api_id, api_hash)
 client.start()
+
 
 @client.on(events.NewMessage(chats = channel))
 async def main(event):
@@ -25,11 +26,9 @@ async def main(event):
     to_discord.send_message(message_event.get_message())
 
     if event.photo:
-        print("send message + photo", event.photo) #dit later fixen, eerst discord bot ready maken
-        # print(event.photo)
-        # message_event.convert_photo()
-        # save = await event.download_media()
-    
+        # print("send message + photo", event.photo, event.photo.sizes[0].bytes)
+        pass
+
 client.run_until_disconnected()
 
 # TODO
